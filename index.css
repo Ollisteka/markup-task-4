@@ -1,0 +1,101 @@
+main
+{
+    max-width: 1500px;
+}
+
+.card:hover
+{
+    box-shadow: 0 0 10px;
+    color: #1b1a1a;
+}
+
+.card 
+{
+    vertical-align: top;
+    border: 1px solid rgba(150, 145, 145, 0.288);
+    margin: 5px;
+}
+
+.cat-img
+{
+    margin: 15px auto 0 auto;
+	display: block;
+}
+
+.cat-img:hover
+{
+    box-shadow: 0 0 5px;
+    color: #472c2c;
+}
+
+.cat-info-item:hover
+{
+    font-size: 102%;
+}
+
+input.full-info-button::after
+{
+    background: url(icons/hamburger.jpg) top right no-repeat
+}
+
+.full-info-button:not(:checked) ~ .card > .cat-info-short
+{
+    display: block;
+}
+
+.full-info-button:not(:checked)  ~ .card > .cat-info-full
+{
+    display: none;
+}
+
+.full-info-button:checked  ~ .card > .cat-info-short
+{
+    display: none;
+}
+
+.full-info-button:checked  ~ .card >  .cat-info-full
+{
+    display: block;
+}
+
+.full-info-button:not(:checked) ~ .card
+{
+    display: inline-block;
+    width: 300px;
+}
+
+.full-info-button:checked ~ .card
+{
+    display: block;
+    width: 350px;
+    font-size: 110%;
+}
+
+.full-info-button:not(:checked) ~ .card .cat-img
+{
+    width: 250px;
+}
+
+.full-info-button:checked ~ .card .cat-img
+{
+    width: 300px;
+}
+
+.card .cat-info
+{
+    width: 250px;
+    text-align: justify;
+    margin: 15px auto;
+    
+}
+
+.cat-name
+{
+    font-size: 110%;
+    font-weight: bold;
+    margin: 15px auto;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 40%;
+}
