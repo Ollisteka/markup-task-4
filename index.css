@@ -121,6 +121,7 @@ main
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 40%;
+    white-space: nowrap;
 }
 
 .cat-name-link:hover,
