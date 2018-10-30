@@ -122,3 +122,12 @@ main
     overflow: hidden;
     max-width: 40%;
 }
+
+.cat-name-link:hover,
+.cat-name-link:visited,
+.cat-name-link:link,
+.cat-name-link:active
+{
+    text-decoration: none;
+    color: black;
+}
