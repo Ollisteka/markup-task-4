@@ -12,14 +12,14 @@ main
 .card 
 {
     vertical-align: top;
-    border: 1px solid rgba(150, 145, 145, 0.288);
+    border: 1px solid rgba(150, 145, 145, .29);
     margin: 5px;
 }
 
 .cat-img
 {
-    margin: 15px auto 0 auto;
-	display: block;
+    margin: 15px auto 0;
+    display: block;
 }
 
 .cat-img:hover
@@ -33,50 +33,73 @@ main
     font-size: 102%;
 }
 
-input.full-info-button::after
+.full-info-switch-pic
 {
-    background: url(icons/hamburger.jpg) top right no-repeat
-}
-
-.full-info-button:not(:checked) ~ .card > .cat-info-short
-{
+    width: 35px;
+    height: 35px;
     display: block;
+    
+   
+    cursor: pointer;
 }
 
-.full-info-button:not(:checked)  ~ .card > .cat-info-full
+.full-info-switch
 {
     display: none;
 }
 
-.full-info-button:checked  ~ .card > .cat-info-short
+.full-info-switch:not(:checked) ~ .full-info-switch-pic
 {
-    display: none;
+    background: url(icons/hamburger.png) no-repeat;
+    background-size: contain;
+    
 }
 
-.full-info-button:checked  ~ .card >  .cat-info-full
+.full-info-switch:checked ~ .full-info-switch-pic
+{
+    background: url(icons/hamburger-swapped.png) no-repeat;
+    background-size: contain;
+}
+
+.full-info-switch:not(:checked) ~ .card > .cat-info-short
 {
     display: block;
 }
 
-.full-info-button:not(:checked) ~ .card
+.full-info-switch:not(:checked) ~ .card > .cat-info-full
+{
+    display: none;
+}
+
+.full-info-switch:checked ~ .card > .cat-info-short
+{
+    display: none;
+}
+
+.full-info-switch:checked ~ .card > .cat-info-full
+{
+    display: block;
+}
+
+.full-info-switch:not(:checked) ~ .card
 {
     display: inline-block;
     width: 300px;
 }
 
-.full-info-button:checked ~ .card
+.full-info-switch:checked ~ .card
 {
     display: block;
     width: 350px;
     font-size: 110%;
 }
 
-.full-info-button:not(:checked) ~ .card .cat-img
+.full-info-switch:not(:checked) ~ .card .cat-img
 {
     width: 250px;
 }
 
-.full-info-button:checked ~ .card .cat-img
+.full-info-switch:checked ~ .card .cat-img
 {
     width: 300px;
 }
