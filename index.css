@@ -50,35 +50,31 @@ main
 
 .full-info-switch:not(:checked) ~ .full-info-switch-pic
 {
-    background: url(icons/hamburger.png) no-repeat;
-    background-size: contain;
-    
+    background: url(icons/hamburger.png) center / contain;
 }
 
 .full-info-switch:checked ~ .full-info-switch-pic
 {
-    background: url(icons/hamburger-swapped.png) no-repeat;
-    background-size: contain;
+    background: url(icons/hamburger-swapped.png) center / contain;
 }
 
-.full-info-switch:not(:checked) ~ .card > .cat-info-short
+.full-info-switch:not(:checked) ~ .card > .cat-info-short,
+.full-info-switch:checked ~ .card > .cat-info-full
 {
     display: block;
 }
 
-.full-info-switch:not(:checked) ~ .card > .cat-info-full
-{
-    display: none;
-}
-
+.full-info-switch:not(:checked) ~ .card > .cat-info-full,
 .full-info-switch:checked ~ .card > .cat-info-short
 {
     display: none;
 }
 
-.full-info-switch:checked ~ .card > .cat-info-full
+.cat-info-short
 {
-    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .full-info-switch:not(:checked) ~ .card
@@ -109,7 +105,6 @@ main
     width: 250px;
     text-align: justify;
     margin: 15px auto;
-    
 }
 
 .cat-name
