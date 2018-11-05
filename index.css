@@ -28,7 +28,13 @@ main
     color: #472c2c;
 }
 
-.cat-info-item:hover
+.cat-info-item
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cat-info-item:hover:not(.cat-name)
 {
     font-size: 102%;
 }
@@ -38,8 +44,6 @@ main
     width: 35px;
     height: 35px;
     display: block;
-    
-   
     cursor: pointer;
 }
 
@@ -113,8 +117,6 @@ main
     font-weight: bold;
     margin: 15px auto;
     text-align: left;
-    text-overflow: ellipsis;
-    overflow: hidden;
     max-width: 40%;
     white-space: nowrap;
 }
